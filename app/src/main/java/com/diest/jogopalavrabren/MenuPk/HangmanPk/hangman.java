@@ -31,7 +31,7 @@ public class hangman extends Activity {
     TextView nameHintH;      //get the name of the hint according language
     TextView controlEdit;
     Button bAH, bBH, bCH, bDH, bEH, bFH, bGH, bHH, bIH, bJH, bKH, bLH, bMH,
-            bNH, bOH, bPH, bQH, bRH, bSH, bTH, bUH, bVH, bWH, bXH, bYH, bZH;
+            bNH, bOH, bPH, bQH, bRH, bSH, bTH, bUH, bVH, bWH, bXH, bYH, bZH, controlButton;
 
     String languageId;      //assign the language: Portuguese or English
     String numberLevel;   //assign the level: Portuguese or English
@@ -85,6 +85,7 @@ public class hangman extends Activity {
     String[] xVet = {"X", "x"};        //set the characters X
     String[] yVet = {"Y", "y"};        //set the characters Y
     String[] zVet = {"Z", "z"};        //set the characters Z
+    String[] controlVet;
 
     MyMedia mp = new MyMedia();
 
@@ -116,471 +117,133 @@ public class hangman extends Activity {
         });
 
         bAH.setOnClickListener(view -> {
-            bAH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < aVet.length; a++){
-                    if (wordChar.equals(aVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(0);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bBH.setOnClickListener(view -> {
-            bBH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < bVet.length; a++){
-                    if (wordChar.equals(bVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(1);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bCH.setOnClickListener(view -> {
-            bCH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < cVet.length; a++){
-                    if (wordChar.equals(cVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(2);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bDH.setOnClickListener(view -> {
-            bDH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < dVet.length; a++){
-                    if (wordChar.equals(dVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(3);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bEH.setOnClickListener(view -> {
-            bEH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < eVet.length; a++){
-                    if (wordChar.equals(eVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(4);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bFH.setOnClickListener(view -> {
-            bFH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < fVet.length; a++){
-                    if (wordChar.equals(fVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(5);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bGH.setOnClickListener(view -> {
-            bGH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < gVet.length; a++){
-                    if (wordChar.equals(gVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(6);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bHH.setOnClickListener(view -> {
-            bHH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < hVet.length; a++){
-                    if (wordChar.equals(hVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(7);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bIH.setOnClickListener(view -> {
-            bIH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < iVet.length; a++){
-                    if (wordChar.equals(iVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(8);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bJH.setOnClickListener(view -> {
-            bJH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < jVet.length; a++){
-                    if (wordChar.equals(jVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(9);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bKH.setOnClickListener(view -> {
-            bKH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < kVet.length; a++){
-                    if (wordChar.equals(kVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(10);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bLH.setOnClickListener(view -> {
-            bLH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < lVet.length; a++){
-                    if (wordChar.equals(lVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(11);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bMH.setOnClickListener(view -> {
-            bMH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < mVet.length; a++){
-                    if (wordChar.equals(mVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(12);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bNH.setOnClickListener(view -> {
-            bNH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < nVet.length; a++){
-                    if (wordChar.equals(nVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(13);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bOH.setOnClickListener(view -> {
-            bOH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < oVet.length; a++){
-                    if (wordChar.equals(oVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(14);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bPH.setOnClickListener(view -> {
-            bPH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < pVet.length; a++){
-                    if (wordChar.equals(pVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(15);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bQH.setOnClickListener(view -> {
-            bQH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < qVet.length; a++){
-                    if (wordChar.equals(qVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(16);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bRH.setOnClickListener(view -> {
-            bRH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < rVet.length; a++){
-                    if (wordChar.equals(rVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(17);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bSH.setOnClickListener(view -> {
-            bSH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < sVet.length; a++){
-                    if (wordChar.equals(sVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(18);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bTH.setOnClickListener(view -> {
-            bTH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < tVet.length; a++){
-                    if (wordChar.equals(tVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(19);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bUH.setOnClickListener(view -> {
-            bUH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < uVet.length; a++){
-                    if (wordChar.equals(uVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(20);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bVH.setOnClickListener(view -> {
-            bVH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < vVet.length; a++){
-                    if (wordChar.equals(vVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(21);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bWH.setOnClickListener(view -> {
-            bWH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < fVet.length; a++){
-                    if (wordChar.equals(wVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(22);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bXH.setOnClickListener(view -> {
-            bXH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < xVet.length; a++){
-                    if (wordChar.equals(xVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(23);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bYH.setOnClickListener(view -> {
-            bYH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < yVet.length; a++){
-                    if (wordChar.equals(yVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(24);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
 
         bZH.setOnClickListener(view -> {
-            bZH.setEnabled(false);
-            x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
-            appears = false;     //initially is always false, if find the letter is true
-            for (i = 0; i < answerLength; i++) {
-                wordChar = String.valueOf(answer.charAt(i));
-                for (a = 0; a < zVet.length; a++){
-                    if (wordChar.equals(zVet[a])){
-                        controlEditView(i);     //choose the TextView according the position the length of the word
-                        letterH_set(wordChar); //send the letter when appears
-                        clickH_sound();     //to start the sound
-                    }
-                }
-            }
-            if (appears.equals(false))
-                errorH_counter();
+            controlButtonView(25);       //control each one letter button to associate
+            controlLetterView();        //execute the verification if are the letter in word
         });
     }
 
@@ -638,10 +301,9 @@ public class hangman extends Activity {
         ask = wordAsk[subLevel - 1];
         answer = wordAnswer[subLevel - 1];
         answerLength = answer.length();
-        nameLevelH.setText(nameLevel);
-        nameHintH.setText(ask); //assign the name of the hint above hangman image
-        initialH_image();
-
+        nameLevelH.setText(nameLevel);      //assign the level name are 114 levels
+        nameHintH.setText(ask); //assign the name of the hint above hangman image are 10 words
+        initialH_image();       //to set the initial image of the hangman
     }
 
     public void valuesH_reset(){     //assign the standard values
@@ -650,14 +312,14 @@ public class hangman extends Activity {
         error = 0;
         i = 0;
         x = 0;
-        backgroundH_reset(); //remove the white fields
-        buttonH_enable();    //enable all buttons to click
-        textH_clear();  //clear all letters
+        backgroundH_reset();        //remove the white fields
+        buttonH_enable();       //enable all buttons to click
+        textH_clear();      //clear all letters
     }
 
     public void fieldsH_set(){      //set fields and characters specials
         for (i = 0; i < answerLength; i++) {
-            controlEditView(i);
+            controlEditView(i);     //choose the EditView to use in reference
             backgroundH_set();
         }
         specialH_letters();
@@ -667,7 +329,7 @@ public class hangman extends Activity {
         for (i = 0; i < answerLength; i++) {        //set the " " or/and "-" according position and white fields
             if (answer.charAt( i ) == '-' || answer.charAt( i ) == ' ' ||
                     answer.charAt( i ) == '?' || answer.charAt( i ) == '\'' || answer.charAt( i ) == '!'){
-                controlEditView(i);
+                controlEditView(i);          //choose the EditView to use in reference
                 letterH_set(String.valueOf(answer.charAt(i)));      //send the position and letter when find the letter
                 backgroundH_special();      // take out a white field when have specials characters
             }
@@ -687,7 +349,7 @@ public class hangman extends Activity {
     }
 
     public void letterH_set(String letter){ //set texts in positions according place
-        controlEditView(i);
+        controlEditView(i);          //choose the EditView to use in reference
         controlEdit.setBackgroundResource(0); //unset background in letter
         controlEdit.setText(letter); //set text letter
         accuracyH_counter();      //considered a hit
@@ -703,7 +365,7 @@ public class hangman extends Activity {
 
     public void textH_clear(){        //clear all fields to start a word
         for (i = 0; i < 20; i++){
-            controlEditView(i);
+            controlEditView(i);     //choose the EditView to use in reference
             controlEdit.setText("");
         }
     }
@@ -716,7 +378,7 @@ public class hangman extends Activity {
             numberSubLevelH.setText(String.valueOf(subLevel));
     }
 
-    public void errorH_counter(){
+    public void errorH_counter(){       //control quantity of errors and call the images errors
         errorCounter++;     //add error counter
         hangH_errors(Integer.parseInt(difficulty), errorCounter);       //put the image errors according difficulty and quantity of errors
         if (audioApp.equals("1"))       //control the error audio
@@ -811,6 +473,133 @@ public class hangman extends Activity {
         }
     }
 
+    public void controlButtonView(Integer value){       //control each one letter button to associate
+        switch (value) {
+            case 0:
+                controlButton = findViewById(R.id.bAH);
+                controlVet = aVet;
+                break;
+            case 1:
+                controlButton = findViewById(R.id.bBH);
+                controlVet = bVet;
+                break;
+            case 2:
+                controlButton = findViewById(R.id.bCH);
+                controlVet = cVet;
+                break;
+            case 3:
+                controlButton = findViewById(R.id.bDH);
+                controlVet = dVet;
+                break;
+            case 4:
+                controlButton = findViewById(R.id.bEH);
+                controlVet = eVet;
+                break;
+            case 5:
+                controlButton = findViewById(R.id.bFH);
+                controlVet = fVet;
+                break;
+            case 6:
+                controlButton = findViewById(R.id.bGH);
+                controlVet = gVet;
+                break;
+            case 7:
+                controlButton = findViewById(R.id.bHH);
+                controlVet = hVet;
+                break;
+            case 8:
+                controlButton = findViewById(R.id.bIH);
+                controlVet = iVet;
+                break;
+            case 9:
+                controlButton = findViewById(R.id.bJH);
+                controlVet = jVet;
+                break;
+            case 10:
+                controlButton = findViewById(R.id.bKH);
+                controlVet = kVet;
+                break;
+            case 11:
+                controlButton = findViewById(R.id.bLH);
+                controlVet = lVet;
+                break;
+            case 12:
+                controlButton = findViewById(R.id.bMH);
+                controlVet = mVet;
+                break;
+            case 13:
+                controlButton = findViewById(R.id.bNH);
+                controlVet = nVet;
+                break;
+            case 14:
+                controlButton = findViewById(R.id.bOH);
+                controlVet = oVet;
+                break;
+            case 15:
+                controlButton = findViewById(R.id.bPH);
+                controlVet = pVet;
+                break;
+            case 16:
+                controlButton = findViewById(R.id.bQH);
+                controlVet = qVet;
+                break;
+            case 17:
+                controlButton = findViewById(R.id.bRH);
+                controlVet = rVet;
+                break;
+            case 18:
+                controlButton = findViewById(R.id.bSH);
+                controlVet = sVet;
+                break;
+            case 19:
+                controlButton = findViewById(R.id.bTH);
+                controlVet = tVet;
+                break;
+            case 20:
+                controlButton = findViewById(R.id.bUH);
+                controlVet = uVet;
+                break;
+            case 21:
+                controlButton = findViewById(R.id.bVH);
+                controlVet = vVet;
+                break;
+            case 22:
+                controlButton = findViewById(R.id.bWH);
+                controlVet = wVet;
+                break;
+            case 23:
+                controlButton = findViewById(R.id.bXH);
+                controlVet = xVet;
+                break;
+            case 24:
+                controlButton = findViewById(R.id.bYH);
+                controlVet = yVet;
+                break;
+            case 25:
+                controlButton = findViewById(R.id.bZH);
+                controlVet = zVet;
+                break;
+        }
+    }
+
+    public void controlLetterView(){        //verification if are the letter in word
+        controlButton.setEnabled(false);
+        x = 1;      //set 1 in x to initiate one time click sound, the second round don't start sound
+        appears = false;     //initially is always false, if find the letter is true
+        for (i = 0; i < answerLength; i++) {
+            wordChar = String.valueOf(answer.charAt(i));
+            for (a = 0; a < controlVet.length; a++){
+                if (wordChar.equals(controlVet[a])){
+                    controlEditView(i);     //choose the EditView to use in reference
+                    letterH_set(wordChar); //send the letter when appears
+                    clickH_sound();     //to start the sound
+                }
+            }
+        }
+        if (appears.equals(false))
+            errorH_counter();
+    }
+
     public void hangH_errors(Integer cause, Integer value){ //set the hangman images according errors and difficulty
         switch (cause){
             case 1: //if difficulty equal 1 = Fácil or Easy
@@ -894,32 +683,10 @@ public class hangman extends Activity {
     }
 
     private void buttonH_enable() {      //disable all button to start again the word
-        bAH.setEnabled(true);
-        bBH.setEnabled(true);
-        bCH.setEnabled(true);
-        bDH.setEnabled(true);
-        bEH.setEnabled(true);
-        bFH.setEnabled(true);
-        bGH.setEnabled(true);
-        bHH.setEnabled(true);
-        bIH.setEnabled(true);
-        bJH.setEnabled(true);
-        bKH.setEnabled(true);
-        bLH.setEnabled(true);
-        bMH.setEnabled(true);
-        bNH.setEnabled(true);
-        bOH.setEnabled(true);
-        bPH.setEnabled(true);
-        bQH.setEnabled(true);
-        bRH.setEnabled(true);
-        bSH.setEnabled(true);
-        bTH.setEnabled(true);
-        bUH.setEnabled(true);
-        bVH.setEnabled(true);
-        bWH.setEnabled(true);
-        bXH.setEnabled(true);
-        bYH.setEnabled(true);
-        bZH.setEnabled(true);
+        for(i = 0; i < 26; i++){
+            controlButtonView(i);       //control each one letter button to associate
+            controlButton.setEnabled(true);
+        }
     }
 
     public void levelH_max(String value){      //check if the level is the maximum if true directs to LastActivity
