@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPk.HangmanPk.hangmanNext"
+    android:id="@+id/screenHangmanNextHN">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/subLevelHN"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_subLevelHIdHN"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:text="@string/space"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/txt_wordSubLevel10HN"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/space"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LevelHN"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Img_backHIdHN"
+            app:layout_constraintStart_toEndOf="@+id/subLevelHN"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_levelHIdHN"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/space"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/Img_backHIdHN"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/hangman_0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Img_homeHIdHN"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/Img_homeHIdHN"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hangmanAreaHN"
+        android:layout_width="393dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/txt_mainWordIdHN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/space"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/Img_HangmanIdHN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/hangman_8"
+            android:contentDescription="@string/imgHangman"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_mainWordIdHN"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_nameHintIdHN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="28dp"
+            android:text="@string/space"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Img_HangmanIdHN"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/WordLineHN"
+            android:layout_width="match_parent"
+            android:layout_height="35sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="44dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nameHintIdHN"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/txt_resetIdHN"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:paddingTop="1dp"
+                android:text="@string/text_reset"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ButtonsLineHN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/WordLineHN">
+
+            <LinearLayout
+                android:id="@+id/FirstLineHN"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bQHN"
+                    style="@style/words"
+                    android:text="@string/_q" />
+
+                <Button
+                    android:id="@+id/bWHN"
+                    style="@style/words"
+                    android:text="@string/_w" />
+
+                <Button
+                    android:id="@+id/bEHN"
+                    style="@style/words"
+                    android:text="@string/_e"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/bRHN"
+                    style="@style/words"
+                    android:text="@string/_r"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/bTHN"
+                    style="@style/words"
+                    android:text="@string/_t" />
+
+                <Button
+                    android:id="@+id/bYHN"
+                    style="@style/words"
+                    android:text="@string/_y" />
+
+                <Button
+                    android:id="@+id/bUHN"
+                    style="@style/words"
+                    android:text="@string/_u" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/SecondLineHN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bIHN"
+                    style="@style/words"
+                    android:text="@string/_i"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/bOHN"
+                    style="@style/words"
+                    android:text="@string/_o"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/bPHN"
+                    style="@style/words"
+                    android:text="@string/_p"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/bAHN"
+                    style="@style/words"
+                    android:text="@string/_a"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/bSHN"
+                    style="@style/words"
+                    android:text="@string/_s" />
+
+                <Button
+                    android:id="@+id/bDHN"
+                    style="@style/words"
+                    android:text="@string/_d"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/bFHN"
+                    style="@style/words"
+                    android:text="@string/_f" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ThirdLineHN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bGHN"
+                    style="@style/words"
+                    android:text="@string/_g"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/bHHN"
+                    style="@style/words"
+                    android:text="@string/_h" />
+
+                <Button
+                    android:id="@+id/bJHN"
+                    style="@style/words"
+                    android:text="@string/_j" />
+
+                <Button
+                    android:id="@+id/bKHN"
+                    style="@style/words"
+                    android:text="@string/_k" />
+
+                <Button
+                    android:id="@+id/bLHN"
+                    style="@style/words"
+                    android:text="@string/_l" />
+
+                <Button
+                    android:id="@+id/bZHN"
+                    style="@style/words"
+                    android:text="@string/_z" />
+
+                <Button
+                    android:id="@+id/bXHN"
+                    style="@style/words"
+                    android:text="@string/_x"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/FourthLineHN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bCHN"
+                    style="@style/words"
+                    android:text="@string/_c"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/bVHN"
+                    style="@style/words"
+                    android:text="@string/_v"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/bBHN"
+                    style="@style/words"
+                    android:text="@string/_b" />
+
+                <Button
+                    android:id="@+id/bNHN"
+                    style="@style/words"
+                    android:text="@string/_n" />
+
+                <Button
+                    android:id="@+id/bMHN"
+                    style="@style/words"
+                    android:text="@string/_m"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

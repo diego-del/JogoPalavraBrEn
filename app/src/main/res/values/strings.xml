@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">Jogo da Palavra PE</string>
+    <string name="best_qtd">Clique</string>
+    <string name="best_qtd_random">Clique Aleatório</string>
+    <string name="best_level">Nível</string>
+    <string name="best_level_random">Nível Aleatório</string>
+    <string name="best_time_result">Melhor Tempo</string>
+    <string name="level_challenge">Desafio</string>
+    <string name="level_hard">Difícil</string>
+    <string name="level_easy">Fácil</string>
+    <string name="hangman_level">Dificuldade Forca</string>
+    <string name="level_medium">Médio</string>
+    <string name="text_memory">Jogo da Memória</string>
+    <string name="text_current_time">Atual</string>
+    <string name="text_button_save">Salvar</string>
+    <string name="text_start">Iniciar</string>
+    <string name="text_option">Opções</string>
+    <string name="text_hangman">Forca</string>
+    <string name="text_language">Idioma</string>
+    <string name="text_audio_button">Áudio Botão</string>
+    <string name="text_audio_app">Áudio App</string>
+    <string name="text_last">Parabéns \n Se você chegou até aqui você é sensacional! \n Espero que tenha aprendido bastante com esse jogo.</string>
+    <string name="text_last_memory">Para reiniciar o jogo vá na \"Option\" do Menu do Jogo da Memória e recomeçe o desafio.</string>
+    <string name="text_last_hangman">Para reiniciar o jogo vá na \"Opção\" do Menu do Jogo da Forca e recomeçe o desafio.</string>
+    <string name="text_last_new">Você conquistou todos os níveis, agora você pode treinar escolhendo o nível.</string>
+    <string name="text_last_word">Para reiniciar o jogo vá na \"Opção\" do Menu do Jogo das Palavras e recomeçe o desafio.</string>
+    <string name="texto_melhor_tempo">Melhor</string>
+    <string name="text_option_menu">Opções do Menu</string>
+    <string name="text_words">Jogo das Palavras</string>
+    <string name="texto_parabens">Parabéns!</string>
+    <string name="texto_proximo">Próximo</string>
+    <string name="texto_qtda_memoria">Qtd Memória</string>
+    <string name="text_reset">Reiniciar</string>
+    <string name="texto_resultado_memoria">Resultado Mémoria</string>
+    <string name="texto_resultado_forca">Resultados Forca</string>
+    <string name="texto_resultados_palavras">Resultado Palavra</string>
+    <string name="texto_salvar_seek">Ouvir</string>
+    <string name="text_pitch">Tom</string>
+    <string name="text_speed">Velocidade</string>
+    <string name="text_tips">Dicas</string>
+    <string name="text_word_tips" tools:ignore="Typos">      O Jogo da Palavra é um jogo no qual você deverá preencher corretamente do lado direito com as palavras correspondente ao outro idioma proposto do jogo.
+        \n
+        \n<b>Objetivo</b>
+        \n      O objetivo do jogo é aprender novas palavras.
+        \n
+        \n<b>Tempo</b>
+        \n      Você pode resetar o tempo do Jogo das Palavras, será guardado o melhor tempo.
+        \n
+        \n<b>Som das palavras</b>
+        \n      Se você clicar na palavra em destaque, você ouvirá o som da palavra no outro idioma, se o aúdio do jogo estiver desativado, o áudio não funcionará.
+        \n
+        \n<b>Nível</b>
+        \n      Cada idioma tem 138 níveis, separados em categorias de assuntos, você pode resetar a qualquer momento os níveis, os 138 níveis são carregados de forma aleatória.
+        \n
+        \n<b>Progresso</b>
+        \n      Cada idioma tem seu próprio progresso, se você trocar de idioma será carregado o progresso correspondente ao idioma.</string>
+
+    <string name="text_word_random_tips" tools:ignore="Typos">      O Jogo da Palavra Aleatório é um jogo no qual você deverá preencher corretamente do lado direito com as palavras correspondente ao outro idioma proposto do jogo.
+        \n
+        \n<b>Objetivo</b>
+        \n      O objetivo do jogo é aprender novas palavras.
+        \n
+        \n<b>Tempo</b>
+        \n      Você pode resetar o tempo do Jogo das Palavras, será guardado o melhor tempo Aleatório.
+        \n
+        \n<b>Som das palavras</b>
+        \n      Se você clicar na palavra em destaque, você ouvirá o som da palavra no outro idioma, se o aúdio do jogo estiver desativado, o áudio não funcionará.
+        \n
+        \n<b>Nível</b>
+        \n      Cada idioma tem 138 níveis, separados em categorias de assuntos, você pode resetar a qualquer momento os níveis, os níveis são carregados de forma aleatória.
+        \n
+        \n<b>Progresso</b>
+        \n      Cada idioma tem seu próprio progresso, são infinitos os níveis que podem se repetirem, se você trocar de idioma será carregado o progresso correspondente ao idioma.</string>
+
+    <string name="text_hangman_tips" tools:ignore="Typos">      A Forca é um jogo em que o jogador tem que acertar qual é a palavra proposta, tendo como dica o tema ligado à palavra.
+        \n      A cada letra errada é desenhada uma parte do boneco, se alcançar a quantidade de erros possíveis você perde, e tem que reiniciar o nível.
+        \n
+        \n<b>Objetivo</b>
+        \n      O objetivo do jogo é acertar a palavra antes de acabar as partes do corpo do boneco.
+        \n
+        \n<b>Tempo</b>
+        \n      Não há marcação de tempo.
+        \n
+        \n<b>Som das palavras</b>
+        \n      Quando se escolher uma letra que não há na palavra será ouvido um som de erro.
+        \n
+        \n<b>Nível</b>
+        \n      Cada idioma tem 138 níveis, separados em categorias de assuntos, você pode resetar a qualquer momento os níveis, os 138 níveis são carregados de forma aleatória.
+        \n
+        \n<b>Progresso</b>
+        \n      Cada idioma tem seu próprio progresso, se você trocar de idioma será carregado o progresso correspondente ao idioma.
+        \n
+        \n<b>Dificuldade</b>
+        \n      São três níveis de dificuldade (fácil, médio e difícil) para cada palavra, se acertar a palavra os erros zeram.
+        \n      Com o nível fácil você pode errar 6 vezes.
+        \n      Com o nível médio você pode errar 4 vezes.
+        \n      Com o nível difícil você pode errar somente 2 vezes.
+        </string>
+
+    <string name="texto_memoria_dicas" tools:ignore="Typos">   O Jogo da Memória é um jogo clássico, se memoriza a posição das peças que são iguais para encontralas.
+        \n      Nesse jogo seram as palavras em um idioma e sua tradução para serem encontradas.
+        \n      As peças são postas com os nomes para baixo em posições aleatórias para serem encontradas, as palavras em Inglês estão em quadrados vermelhos e as em Português em verdes.
+        \n
+        \n<b>Objetivo</b>
+        \n      O objetivo do jogo é acertar a posição da palavra e sua tradução.
+        \n
+        \n<b>Tempo</b>
+        \n      Não há marcação de tempo, porém há marcação dos cliques.
+        \n
+        \n<b>Som das palavras</b>
+        \n      Quando se clicar em um quadrado é emitido um efeito sonoro.
+        \n
+        \n<b>Nível</b>
+        \n      Há 138 níveis, separados em categorias de assuntos, você pode resetar a qualquer momento, os 138 níveis são carregados de forma aleatória.
+        \n
+        \n<b>Progresso</b>
+        \n      Cada idioma tem seu próprio progresso, se você trocar de idioma será carregado o progresso correspondente ao idioma.</string>
+    <string name="text_n">50</string>
+    <string name="imagem_home">Home</string>
+    <string name="imagem_voltar">Voltar</string>
+    <string name="imagem_idioma">Idioma</string>
+    <string name="imagem_audio">Áudio</string>
+    <string name="by_diego">Por Diego</string>
+    <string name="porcentagem">Porcentagem</string>
+    <string name="text_00">00:00</string>
+    <string name="text_name_level">Verbo (presente)</string>
+    <string name="texto_nivel">110</string>
+    <string name="palavra01">Palavra 01</string>
+    <string name="palavra02">Palavra 02</string>
+    <string name="palavra03">Palavra 03</string>
+    <string name="palavra04">Palavra 04</string>
+    <string name="palavra05">Palavra 05</string>
+    <string name="palavra06">Palavra 06</string>
+    <string name="palavra07">Palavra 07</string>
+    <string name="palavra08">Palavra 08</string>
+    <string name="palavra09">Palavra 09</string>
+    <string name="palavra10">Palavra 10</string>
+    <string name="texto_edit" text-align="center">Digite em Inglês</string>
+    <string name="_01">01</string>
+    <string name="_barra">/</string>
+    <string name="_10"> / 10</string>
+    <string name="_138">138</string>
+    <string name="imagem_forca">Imagem Forca</string>
+    <string name="mostrar_palavra_forca">Mostrar Palavra</string>
+    <string name="_q">Q</string>
+    <string name="_w">W</string>
+    <string name="_e">E</string>
+    <string name="_r">R</string>
+    <string name="_t">T</string>
+    <string name="_y">Y</string>
+    <string name="_u">U</string>
+    <string name="_i">I</string>
+    <string name="_o">O</string>
+    <string name="_p">P</string>
+    <string name="_a">A</string>
+    <string name="_s">S</string>
+    <string name="_d">D</string>
+    <string name="_f">F</string>
+    <string name="_g">G</string>
+    <string name="_h">H</string>
+    <string name="_j">J</string>
+    <string name="_k">K</string>
+    <string name="_l">L</string>
+    <string name="_z">Z</string>
+    <string name="_x">X</string>
+    <string name="_c">C</string>
+    <string name="_v">V</string>
+    <string name="_b">B</string>
+    <string name="_n">N</string>
+    <string name="_m">M</string>
+    <string name="_espaco">" "</string>
+    <string name="_999">999</string>
+    <string name="texto_checar">Checar</string>
+    <string name="text_choose">Escolha seu Idioma</string>
+    <string name="text_choose_2">Choose your Language</string>
+    <string name="tx_nome_jogo">Jogo da Palavra PE</string>
+    <string name="_im_grande_pri">Imagem grande Brasil</string>
+    <string name="_im_grande_seg">Imagem grande Eua</string>
+    <string name="text_random">Aleatório</string>
+    <string name="texto_tempo">Tempo</string>
+    <string name="txt_reset_all">Reiniciar Tudo</string>
+    <string name="x">X</string>
+    <string name="mainWord">Level name</string>
+    <string name="space">"  "</string>
+    <string name="imgHangman">imageHangman</string>
+    <string name="txt_challenge">Challenge</string>
+    <string name="building_materials">Materiais de construção</string>
+    <string name="ex_word">Mudando para o Mal</string>
+    <string name="pitch_speed">Tom / Velocidade</string>
+    <string name="word_option">Opção Palavra</string>
+    <string name="hangman_option">Opção Forca</string>
+    <string name="memory_option">Opção Memória</string>
+    <string name="random_option">Opção Aleatório</string>
+    <string name="text_go">Ir para Opção</string>
+</resources>

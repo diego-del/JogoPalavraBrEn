@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPk.MemoryPk.memoryNext"
+    android:id="@+id/screenMemoryNextId">
+
+    <TextView
+        android:fontFamily="@font/baloo_tamma_2_bold"
+        android:id="@+id/congratulationsMN"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/logo"
+        android:gravity="center"
+        android:text="@string/texto_parabens"
+        android:textColor="#FAF8F8"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MainScoreboardMN"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/BestMN"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:fontFamily="@font/baloo_tamma_2_bold"
+                android:id="@+id/clickMN"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="@string/texto_melhor_tempo" />
+
+            <TextView
+                android:fontFamily="@font/baloo_tamma_2_bold"
+                android:id="@+id/bestClickMNId"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="@string/_01" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CurrentMN"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/BestMN"
+            app:layout_constraintHorizontal_bias="0.008"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:fontFamily="@font/baloo_tamma_2_bold"
+                android:id="@+id/currentMN"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="@string/text_current_time" />
+
+            <TextView
+                android:fontFamily="@font/baloo_tamma_2_bold"
+                android:id="@+id/currentClickMNId"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="@string/_01" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:fontFamily="@font/baloo_tamma_2_bold"
+        android:id="@+id/buttonNextMN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/texto_proximo"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/MainScoreboardMN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/congratulationsMN" />
+</androidx.constraintlayout.widget.ConstraintLayout>

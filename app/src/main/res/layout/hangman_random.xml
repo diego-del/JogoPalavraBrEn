@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPk.HangmanPk.hangmanRandom"
+    android:id="@+id/screenHangmanRandomId">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/SubLevelHR"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/numberSubLevelHRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/bigshot_one_regular"
+                android:gravity="center"
+                android:text="@string/_01"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numberSubLevelHR"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/bigshot_one_regular"
+                android:gravity="center"
+                android:text="@string/_10"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LevelHR"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/backHRId"
+            app:layout_constraintStart_toEndOf="@+id/SubLevelHR"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/numberLevelHRId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/bigshot_one_regular"
+                android:gravity="center"
+                android:text="@string/x"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/backHRId"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/button_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/homeHRId"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/homeHRId"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hangmanAreaHR"
+        android:layout_width="393dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:fontFamily="@font/bigshot_one_regular"
+            android:id="@+id/nameLevelHRId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/mainWord"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageHRId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/hangman_0"
+            android:contentDescription="@string/imgHangman"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameLevelHRId"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:fontFamily="@font/bigshot_one_regular"
+            android:id="@+id/nameHintHRId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="28dp"
+            android:text="@string/_x"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageHRId"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/HangmanLineHR"
+            android:layout_width="match_parent"
+            android:layout_height="35sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="44dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameHintHRId"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter01HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:paddingTop="1dp"
+                android:text="@string/_c"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter02HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_o"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter03HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_m"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter04HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_i"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter05HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_d"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter06HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_a"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter07HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/space"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter08HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_p"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter09HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_a"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter10HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_r"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter11HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_a"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter12HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/space"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter13HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_v"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter14HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_i"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter15HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_a"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter16HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_g"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter17HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_e"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter18HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_m"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:fontFamily="@font/bigshot_one_regular"
+                android:id="@+id/letter19HRId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:text="@string/_m"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ButtonsLineHR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HangmanLineHR">
+
+            <LinearLayout
+                android:id="@+id/FirstLineHR"
+                android:layout_width="392dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bQHRId"
+                    style="@style/words"
+                    android:text="@string/_q" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bWHRId"
+                    style="@style/words"
+                    android:text="@string/_w" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bEHRId"
+                    style="@style/words"
+                    android:text="@string/_e"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bRHRId"
+                    style="@style/words"
+                    android:text="@string/_r"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bTHRId"
+                    style="@style/words"
+                    android:text="@string/_t" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bYHRId"
+                    style="@style/words"
+                    android:text="@string/_y" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bUHRId"
+                    style="@style/words"
+                    android:text="@string/_u" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/SecondLineHR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bIHRId"
+                    style="@style/words"
+                    android:text="@string/_i"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bOHRId"
+                    style="@style/words"
+                    android:text="@string/_o"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bPHRId"
+                    style="@style/words"
+                    android:text="@string/_p"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bAHRId"
+                    style="@style/words"
+                    android:text="@string/_a"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bSHRId"
+                    style="@style/words"
+                    android:text="@string/_s" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bDHRId"
+                    style="@style/words"
+                    android:text="@string/_d"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bFHRId"
+                    style="@style/words"
+                    android:text="@string/_f" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ThirdLineHR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bGHRId"
+                    style="@style/words"
+                    android:text="@string/_g"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bHHRId"
+                    style="@style/words"
+                    android:text="@string/_h" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bJHRId"
+                    style="@style/words"
+                    android:text="@string/_j" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bKHRId"
+                    style="@style/words"
+                    android:text="@string/_k" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bLHRId"
+                    style="@style/words"
+                    android:text="@string/_l" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bZHRId"
+                    style="@style/words"
+                    android:text="@string/_z" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bXHRId"
+                    style="@style/words"
+                    android:text="@string/_x"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/FourthLineHR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bCHRId"
+                    style="@style/words"
+                    android:text="@string/_c"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bVHRId"
+                    style="@style/words"
+                    android:text="@string/_v"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bBHRId"
+                    style="@style/words"
+                    android:text="@string/_b" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bNHRId"
+                    style="@style/words"
+                    android:text="@string/_n" />
+
+                <Button
+                    android:fontFamily="@font/bigshot_one_regular"
+                    android:id="@+id/bMHRId"
+                    style="@style/words"
+                    android:text="@string/_m"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

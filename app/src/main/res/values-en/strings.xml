@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Jogo da Palavra PE</string>
+    <string name="best_qtd">Click</string>
+    <string name="best_qtd_random">Random Click</string>
+    <string name="best_level">Level</string>
+    <string name="best_level_random">Random Level</string>
+    <string name="best_time_result">Best Time</string>
+    <string name="level_challenge">Desafio</string>
+    <string name="level_hard">Hard</string>
+    <string name="level_easy">Easy</string>
+    <string name="hangman_level">Hangman Difficulty</string>
+    <string name="level_medium">Medium</string>
+    <string name="text_memory">Memory Game</string>
+    <string name="text_current_time">Current</string>
+    <string name="text_button_save">Save</string>
+    <string name="text_start">Start</string>
+    <string name="text_option">Options</string>
+    <string name="text_hangman">Hangman</string>
+    <string name="text_language">Language</string>
+    <string name="text_audio_button">Button Audio</string>
+    <string name="text_audio_app">App Audio</string>
+    <string name="text_last">Congratulations \n If you got here you are awesome! \n I hope you learned a lot from this game.</string>
+    <string name="text_last_memory">To restart the game go to Memory Game Menu \"Option\" and restart the challenge.</string>
+    <string name="text_last_hangman">To restart the game go to Hangman\'s Game Menu \"Option\" and restart the challenge.</string>
+    <string name="text_last_new">You have conquered all levels, now you can train by choosing the level.</string>
+    <string name="text_last_word">To restart the game go to Words Game Menu \"Option\"  and restart the challenge.</string>
+    <string name="texto_melhor_tempo">Best</string>
+    <string name="text_option_menu">Menu Options</string>
+    <string name="text_words">Words Game</string>
+    <string name="texto_parabens">Congratulations!</string>
+    <string name="texto_proximo">Next</string>
+    <string name="texto_qtda_memoria">Qtd Memory</string>
+    <string name="text_reset">Restart</string>
+    <string name="texto_resultado_memoria">Results Memory</string>
+    <string name="texto_resultado_forca">Results Hangman</string>
+    <string name="texto_resultados_palavras">Result Word</string>
+    <string name="texto_salvar_seek">Listen</string>
+    <string name="text_pitch">Pitch</string>
+    <string name="text_speed">Speed</string>
+    <string name="text_tips">Tips</string>
+    <string name="text_word_tips">   The Word Game is a game in which you must correctly fill in the right side with the words corresponding to the other proposed language of the game.
+        \n
+        \n<b>Goal</b>
+        \n   The goal of the game is to learn new words.
+        \n
+        \n<b>Time</b>
+        \n   The best time will be saved, and you can reset the Words Game time.
+        \n
+        \n<b>Sounds of words</b>
+        \n   If you click on the highlighted word, you will hear the sound of the word in the other language, if game audio is off, audio will not work.
+        \n
+        \n<b>Level</b>
+        \n   Each language has 138 levels, separated into subject categories, you can reset the levels at any time, the 138 levels are loaded randomly.
+        \n
+        \n<b>Progress</b>
+        \n   Each language has it own progress, if you change language the progress corresponding to the language will be loaded.</string>
+
+    <string name="text_word_random_tips">   The Word Random Game is a game in which you must correctly fill in the right side with the words corresponding to the other proposed language of the game.
+        \n
+        \n<b>Goal</b>
+        \n   The goal of the game is to learn new words.
+        \n
+        \n<b>Time</b>
+        \n   The best time will be saved, and you can reset the Words Random Game time.
+        \n
+        \n<b>Sounds of words</b>
+        \n   If you click on the highlighted word, you will hear the sound of the word in the other language, if game audio is off, audio will not work.
+        \n
+        \n<b>Level</b>
+        \n   Each language has 138 levels, separated into subject categories, you can reset the levels at any time, the 138 levels are loaded randomly.
+        \n
+        \n<b>Progress</b>
+        \n   Each language has it own progress, there are infinite levels, that can be repeated, if you change language the progress corresponding to the language will be loaded.</string>
+
+
+    <string name="text_hangman_tips">   Hangman is a game in which the player has to guess what the proposed word is, having as its tip the theme linked to the word.
+        \n   With each wrong letter a part of the doll, if you reach the amount of possible errors, you lose and have to restart the level.
+        \n
+        \n<b>Goal</b>
+        \n   The objective of the game is to hit the word before finishing the doll\'s body parts.
+        \n
+        \n<b>Time</b>
+        \n   There is no time stamp.
+        \n
+        \n<b>Sounds of words</b>
+        \n   When choosing a letter that is not in the word, an error sound will be heard.
+        \n
+        \n<b>Level</b>
+        \n   Each language has 138 levels, separated into subject categories, you can reset the levels at any time, the 138 levels are loaded randomly.
+        \n
+        \n<b>Progress</b>
+        \n   Each language has it own progress, if you change language the progress corresponding to the language will be loaded.
+        \n
+        \n<b>Difficulty</b>
+        \n   There are three levels of difficulty (easy, medium and hard) for each word, if you get the word right the mistakes made.
+        \n   With the easy level you can miss 6 times.
+        \n   With the medium level you can miss 4 times.
+        \n   With the hard level you can only miss 2 times.
+        </string>
+
+    <string name="texto_memoria_dicas">   The Memory Game is a classic game, memorizing the position of the pieces that are the same to find them.
+        \n   In this game will be the words in a language and their translation to be found.
+        \n   The pieces are put with the names down in random positions to be found, English words are in red squares and Portuguese words in green.
+        \n
+        \n<b>Goal</b>
+        \n   The objective of the game is to get the word position and its translation right.
+        \n
+        \n<b>Time</b>
+        \n   There is no time stamp but there is click markup.
+        \n
+        \n<b>Sounds of words</b>
+        \n   Clicking on a square gives a sound effect.
+        \n
+        \n<b>Level</b>
+        \n   There are 138 levels, separated into subject categories, you can reset at any time, the 138 levels are loaded randomly.
+        \n
+        \n<b>Progress</b>
+        \n   Each language has it own progress, if you change language the progress corresponding to the language will be loaded.</string>
+    <string name="text_n">50</string>
+    <string name="imagem_home">Home</string>
+    <string name="imagem_voltar">Previous</string>
+    <string name="imagem_idioma">Language</string>
+    <string name="imagem_audio">Audio</string>
+    <string name="by_diego">By Diego</string>
+    <string name="porcentagem">Percentage</string>
+    <string name="text_00">00:00</string>
+    <string name="text_name_level">Fruits</string>
+    <string name="texto_nivel">110</string>
+    <string name="palavra01">Word 01</string>
+    <string name="palavra02">Word 02</string>
+    <string name="palavra03">Word 03</string>
+    <string name="palavra04">Word 04</string>
+    <string name="palavra05">Word 05</string>
+    <string name="palavra06">Word 06</string>
+    <string name="palavra07">Word 07</string>
+    <string name="palavra08">Word 08</string>
+    <string name="palavra09">Word 09</string>
+    <string name="palavra10">Word 10</string>
+    <string text-align="center" name="texto_edit">Type in Portuguese</string>
+    <string name="_01">01</string>
+    <string name="_barra">/</string>
+    <string name="_10"> / 10</string>
+    <string name="_138">138</string>
+    <string name="imagem_forca">Hangman Image</string>
+    <string name="mostrar_palavra_forca">Show Word</string>
+    <string name="_q">Q</string>
+    <string name="_w">W</string>
+    <string name="_e">E</string>
+    <string name="_r">R</string>
+    <string name="_t">T</string>
+    <string name="_y">Y</string>
+    <string name="_u">U</string>
+    <string name="_i">I</string>
+    <string name="_o">O</string>
+    <string name="_p">P</string>
+    <string name="_a">A</string>
+    <string name="_s">S</string>
+    <string name="_d">D</string>
+    <string name="_f">F</string>
+    <string name="_g">G</string>
+    <string name="_h">H</string>
+    <string name="_j">J</string>
+    <string name="_k">K</string>
+    <string name="_l">L</string>
+    <string name="_z">Z</string>
+    <string name="_x">X</string>
+    <string name="_c">C</string>
+    <string name="_v">V</string>
+    <string name="_b">B</string>
+    <string name="_n">N</string>
+    <string name="_m">M</string>
+    <string name="_espaco">" "</string>
+    <string name="_999">999</string>
+    <string name="texto_checar">Check</string>
+    <string name="text_choose">Escolha seu Idioma</string>
+    <string name="text_choose_2">Choose your Language</string>
+    <string name="tx_nome_jogo">Word \n Game PE</string>
+    <string name="_im_grande_pri">Big imagen Brasil</string>
+    <string name="_im_grande_seg">Big imagen Eua</string>
+    <string name="text_random">Random</string>
+    <string name="texto_tempo">Time</string>
+    <string name="txt_reset_all">Reset All</string>
+    <string name="x">X</string>
+    <string name="mainWord">Level name</string>
+    <string name="space">"  "</string>
+    <string name="imgHangman">imageHangman</string>
+    <string name="txt_challenge">Desafio</string>
+    <string name="building_materials">Materials Building</string>
+    <string name="ex_word">BreakBad</string>
+    <string name="pitch_speed">Pitch / Speed</string>
+    <string name="word_option">Word Option</string>
+    <string name="hangman_option">Hangman Option</string>
+    <string name="memory_option">Memory Option</string>
+    <string name="random_option">Random Option</string>
+    <string name="text_go">Go to Option</string>
+</resources>
